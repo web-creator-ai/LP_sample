@@ -1,0 +1,120 @@
+/* style.css */
+
+/* 全体設定 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.section-sub {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* ヒーローエリア */
+.hero {
+  background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.badge {
+  background: #ffcc00;
+  color: #333;
+  padding: 5px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.hero h1 { font-size: 3rem; margin: 0 0 20px; line-height: 1.3; }
+.highlight { color: #ffcc00; text-decoration: underline; }
+
+.btn-main {
+  display: inline-block;
+  background: #ff4c4c;
+  color: #fff;
+  padding: 18px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 15px rgba(255,76,76,0.4);
+  transition: 0.3s;
+}
+
+/* 悩み */
+.problems { background: #fff; padding: 100px 20px; text-align: center; border-bottom: 1px solid #eee; }
+.problem-list { display: inline-block; text-align: left; list-style: none; padding: 0; margin-bottom: 30px; }
+.problem-list li { font-size: 1.1rem; margin-bottom: 15px; }
+.problem-list li::before { content: '✔'; color: #ff4c4c; margin-right: 10px; font-weight: bold; }
+.answer { font-size: 1.3rem; color: #003366; font-weight: bold; }
+
+/* 強み */
+.features { padding: 100px 20px; background-color: #f4f7f9; }
+.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; }
+.feature-card { position: relative; background: #fff; padding: 50px 30px; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(0, 51, 102, 0.08); transition: 0.3s; overflow: hidden; border: 1px solid rgba(0, 51, 102, 0.05); }
+.feature-card:hover { transform: translateY(-10px); }
+.feature-card .icon { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; background: #003366; color: #fff; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; margin-bottom: 20px; }
+.feature-card.ai { border-top: 5px solid #00b4d8; }
+.feature-card.coaching { border-top: 5px solid #0077b6; }
+.feature-card.price { border-top: 5px solid #ff4c4c; }
+
+/* 【NEW】ステップ */
+.steps { padding: 100px 20px; background: #fff; }
+.step-container { display: flex; align-items: center; justify-content: center; max-width: 1100px; margin: 0 auto; gap: 20px; }
+.step-box { background: #f0f7ff; padding: 40px 25px; border-radius: 15px; flex: 1; text-align: center; position: relative; border-bottom: 5px solid #0077b6; }
+.step-num { font-family: 'Montserrat', sans-serif; color: #0077b6; font-weight: bold; font-size: 0.9rem; margin-bottom: 15px; display: block; }
+.step-box h3 { font-size: 1.2rem; color: #003366; margin-bottom: 15px; }
+.step-box p { font-size: 0.9rem; color: #555; }
+.step-arrow { color: #0077b6; font-size: 1.5rem; font-weight: bold; }
+
+/* 料金 */
+.price-plan { padding: 100px 20px; background: #f9f9f9; }
+.price-table { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.price-item { background: #fff; padding: 40px 30px; border-radius: 10px; width: 250px; text-align: center; border: 1px solid #ddd; }
+.price-item.featured { border: 3px solid #ffcc00; position: relative; transform: scale(1.05); }
+.recom { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #ffcc00; padding: 5px 15px; font-weight: bold; border-radius: 20px; font-size: 0.8rem; }
+.amount { font-size: 1.8rem; font-weight: bold; color: #ff4c4c; margin: 20px 0; }
+
+/* Q&A */
+.faq { padding: 100px 20px; background-color: #fff; }
+.faq-container { max-width: 800px; margin: 0 auto; }
+.faq-item { margin-bottom: 15px; border: 1px solid #eee; border-radius: 10px; background-color: #f8fbff; overflow: hidden; }
+.faq-item[open] { background-color: #fff; border-color: #0077b6; }
+summary { padding: 20px 25px; font-weight: bold; color: #003366; cursor: pointer; list-style: none; position: relative; outline: none; }
+summary::after { content: '+'; position: absolute; right: 25px; font-size: 1.5rem; color: #0077b6; }
+.faq-item[open] summary::after { content: '−'; }
+.faq-answer { padding: 0 25px 20px; color: #666; font-size: 0.9rem; border-top: 1px inset #eee; padding-top: 15px; }
+
+/* お問い合わせ */
+.contact { padding: 100px 20px; text-align: center; background: #003366; color: #fff; }
+.btn-large { display: inline-block; background: #00c853; color: #fff; padding: 20px 40px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.3rem; margin-top: 20px; }
+
+footer { text-align: center; padding: 30px; font-size: 0.8rem; color: #999; }
+
+@media (max-width: 900px) {
+  .step-container { flex-direction: column; }
+  .step-arrow { transform: rotate(90deg); margin: 10px 0; }
+  .price-item { width: 100%; transform: none !important; }
+}
